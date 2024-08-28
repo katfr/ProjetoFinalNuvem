@@ -1,4 +1,4 @@
-## COMO RODAR 
+## COMO RODAR LOCALMENTE
 - Ativar o ambiente virtual
 ```
 cd src
