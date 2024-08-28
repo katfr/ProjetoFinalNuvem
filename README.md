@@ -1,4 +1,12 @@
-## COMO RODAR 
+## COMO RODAR A APLICAÇÃO COM DOCKER
+```
+cd src
+```
+```
+docker-compose up --build
+```
+
+## COMO RODAR A APLICAÇÃO SEM DOCKER, LOCALMENTE COM BANCO DE DADOS LOCAL
 - Ativar o ambiente virtual
 ```
 cd src
@@ -59,3 +67,19 @@ SHOW DATABASES
 
 - No codigo colocar 
 DATABASE_URL = "mysql+pymysql://root:senha@localhost:3306/clientes"
+
+
+docker-compose up --build
+
+1. Rodando um Container MySQL com Docker
+
+docker run --name meu-mysql -e MYSQL_ROOT_PASSWORD=senha123 -e MYSQL_DATABASE=clientes -p 3306:3306 -d mysql:8.0
+
+DATABASE_URL = "mysql+pymysql://root:senha123@127.0.0.1:3306/clientes"
+
+
+-------------------------------------------
+
+cd src
+
+docker-compose up --build
