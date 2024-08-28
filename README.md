@@ -7,7 +7,6 @@ docker-compose up --build
 ```
 
 ## COMO RODAR A APLICAÇÃO SEM DOCKER, LOCALMENTE COM BANCO DE DADOS LOCAL
-## COMO RODAR LOCALMENTE
 - Ativar o ambiente virtual
 ```
 cd src
