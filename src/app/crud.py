@@ -2,8 +2,8 @@ from fastapi import HTTPException
 from sqlalchemy.orm import Session
 from . import models, schemas
 
-def get_cliente(db: Session, cliente_id: int):
-    return db.query(models.Cliente).filter(models.Cliente.id == cliente_id).first()
+def get_cliente(db: Session, nome: str, skip: int = 0, limit: int = 10):
+    return db.query(models.Cliente).filter(models.Cliente.nome == nome).offset(skip).limit(limit).all()
 
 def get_cliente_by_cpf(db: Session, cpf: str):
     return db.query(models.Cliente).filter(models.Cliente.cpf == cpf).first()

@@ -51,12 +51,12 @@ def read_clientes(skip: int = 0, limit: int = 10, db: Session = Depends(get_db))
     return crud.get_clientes(db, skip=skip, limit=limit)
 
 # Endpoint para Retornar o cliente pelo ID
-@app.get("/clientes/{cliente_id}", response_model=schemas.Cliente)
-def read_cliente(cliente_id: int, db: Session = Depends(get_db)):
-    db_cliente = crud.get_cliente(db, cliente_id=cliente_id)
+@app.get("/clientes/{nome}", response_model=list[schemas.Cliente])
+def read_cliente(nome: str, skip: int = 0, limit: int = 10, db: Session = Depends(get_db)):
+    db_cliente = crud.get_cliente(db, nome=nome)
     if db_cliente is None:
-        raise HTTPException(status_code=404, detail="ID do Cliente não encontrado")
-    return db_cliente
+        raise HTTPException(status_code=404, detail="Nome do Cliente não encontrado")
+    return crud.get_cliente(db, nome=nome, skip=skip, limit=limit)
 
 # Endpoint para buscar cliente pelo CPF
 @app.get("/clientes/cpf/{cpf}", response_model=schemas.Cliente)
