@@ -1,95 +1,39 @@
-#
+# Sistema de Cadastro de Clientes
+## 📜 Descrição
+Este projeto é um sistema de cadastro de clientes que permite realizar operações de CRUD (Criar, Ler, Atualizar e Deletar) e de buscar um cliente pelo nome e/ou CPF em uma base de dados. A aplicação foi desenvolvida utilizando FastAPI para o backend, com SQLAlchemy para interação com o banco de dados MySQL. O frontend foi implementado utilizando HTML, CSS e JavaScript, proporcionando uma interface web simples e intuitiva para os usuários.
 
-## COMO RODAR A APLICAÇÃO COM DOCKER
+O projeto é containerizado utilizando Docker, facilitando o deployment e a escalabilidade. Para a hospedagem na nuvem, a aplicação está sendo executada em uma instância EC2 da AWS, enquanto o banco de dados MySQL está armazenado em um serviço Amazon RDS, garantindo alta disponibilidade e segurança dos dados.
 
+## ✅ Tecnologias utilizadas
+- FastAPI: Framework web moderno e de alto desempenho para a construção de APIs com Python.
+- MySQL: Sistema de gerenciamento de banco de dados relacional utilizado para armazenar as informações dos clientes.
+- SQLAlchemy: ORM (Object-Relational Mapping) utilizado para a interação com o banco de dados MySQL.
+- Docker: Plataforma para a construção, envio e execução de aplicações em containers, garantindo um ambiente de execução consistente.
+- HTML, CSS, JavaScript: Tecnologias utilizadas para a criação da interface web do sistema.
+- AWS EC2: Serviço de computação em nuvem utilizado para hospedar a aplicação.
+- AWS RDS: Serviço de banco de dados gerenciado utilizado para hospedar o banco de dados MySQL.
+
+## 🧑‍💻 Como usar a Aplicação
+
+**Para acesso a aplicação, copie o link abaixo e cole no navegador:**
+```
+http://3.19.239.23/
+```
+
+## 💻 Como rodar a Aplicação Localmente
+**Pré-requisitos** :  
+-`Docker` e `Docker Compose`
+
+- Entre na pasta do projeto
 ``` shell
 cd src
 ```
-
+- Execute o container Docker
 ``` shell
 docker-compose up --build
 ```
 
-## COMO RODAR A APLICAÇÃO SEM DOCKER, LOCALMENTE COM BANCO DE DADOS LOCAL
-
-- Ativar o ambiente virtual
-
-``` shell
-cd src
-```
-
-``` shell
-python -m venv myenv
-```
-
-Windows:
-
-``` shell
-myenv\Scripts\activate #windows
-```
-
-Linux:
-
-``` shell
-source myenv/bin/activate #linux
-```
-
-- Instalar as dependencias no ambiente virtual
-
-``` shell
-pip install -r requirements.txt
-```
-
-- Criar database no banco de dados
-
-- Atualizar variável do banco de dados
-
-- Rodar o projeto
-
-```shell
-uvicorn app.main:app
-```
-
-<br>
-<br>
-<br>
-
-
-
-### Extra
-
-#### DESENVOLVIMENTO
-
-- Criar e ativar o ambiente virtual: `python -m venv myenv` e `myenv\Scripts\activate`
-
-- Observar se o interpretador é o python da máquina virtual
-
-- Primeiro, instale as bibliotecas necessárias:
-`pip install fastapi uvicorn sqlalchemy psycopg2-binary`
-
-- Testando
-
-- Lista as bibliotecas instaladas no environment além das instaladas por padrão: `pip freeze --local`
-
-- Cria um arquivo requirementes.txt com todas as bibliotecas instaladas nesse ambiente virtual: `pip freeze > requirements.txt`
-
-------------------------------
-#### MySQL
-
-- Abrir terminal digitar para iniciar `mysql` e `mysql -u root -p`
-- Digitar a senha e vai estar dentro do mysql>
-- Dentro colocar pra criar a tabela clientes: `CREATE DATABASE clientes;`
-
-- Mostrar as tabelas criadas: `SHOW DATABASES`
-
-- No codigo `/src/app/database.py` colocar
-`DATABASE_URL = "mysql+pymysql://root:senha@localhost:3306/clientes"`
-
----
-
-#### Docker
-
-- Usando docker compose: `cd src` e `docker-compose up --build`
-
-- Rodando um Container só com MySQL usando Docker: `docker run --name meu-mysql -e MYSQL_ROOT_PASSWORD=senha123 -e MYSQL_DATABASE=clientes -p 3306:3306 -d mysql:8.0` 
-- URL de exemplo referente ao container: `DATABASE_URL = "mysql+pymysql://root:senha123@127.0.0.1:3306/clientes"`
+## 👤 Autores
+- [Katarina](https://github.com/katfr) 
+- [Layra](https://github.com/Layravbf) 
+- [Marco](https://github.com/lieko0) 
