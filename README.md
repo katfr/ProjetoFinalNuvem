@@ -1,8 +1,8 @@
 # Sistema de Cadastro de Clientes
 ## 📜 Descrição
-Este projeto é um sistema de cadastro de clientes que permite realizar operações de CRUD (Criar, Ler, Atualizar e Deletar) e de buscar um cliente pelo nome e/ou CPF em uma base de dados. A aplicação foi desenvolvida utilizando FastAPI para o backend, com SQLAlchemy para interação com o banco de dados MySQL. O frontend foi implementado utilizando HTML, CSS e JavaScript, proporcionando uma interface web simples e intuitiva para os usuários.
+Este projeto é um sistema de cadastro de clientes que permite realizar operações de CRUD (Criar, Ler, Atualizar e Deletar) e de buscar um cliente pelo nome e/ou CPF em uma base de dados. A aplicação foi desenvolvida utilizando `FastAPI` para o backend, com `SQLAlchemy` para interação com o banco de dados `MySQL`. O frontend foi implementado utilizando `HTML`, `CSS` e `JavaScript`, proporcionando uma interface web simples e intuitiva para os usuários.
 
-O projeto é containerizado utilizando Docker, facilitando o deployment e a escalabilidade. Para a hospedagem na nuvem, a aplicação está sendo executada em uma instância EC2 da AWS, enquanto o banco de dados MySQL está armazenado em um serviço Amazon RDS, garantindo alta disponibilidade e segurança dos dados.
+O projeto é containerizado utilizando `Docker`, facilitando o deployment e a escalabilidade. Para a hospedagem na nuvem, a aplicação está sendo executada em uma instância `EC2` da AWS, enquanto o banco de dados MySQL está armazenado em um serviço `Amazon RDS`, garantindo alta disponibilidade e segurança dos dados.
 
 ## ✅ Tecnologias utilizadas
 - FastAPI: Framework web moderno e de alto desempenho para a construção de APIs com Python.
