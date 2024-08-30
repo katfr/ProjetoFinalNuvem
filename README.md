@@ -13,12 +13,13 @@ O projeto é containerizado utilizando `Docker`, facilitando o deployment e a es
 - AWS EC2: Serviço de computação em nuvem utilizado para hospedar a aplicação.
 - AWS RDS: Serviço de banco de dados gerenciado utilizado para hospedar o banco de dados MySQL.
 
-## 🧑‍💻 Como usar a Aplicação
+<!-- ## 🧑‍💻 Como usar a Aplicação
 
 **Para acesso a aplicação, copie o link abaixo e cole no navegador:**
 ```
 http://3.19.239.23/
 ```
+-->
 
 ## 💻 Como rodar a Aplicação Localmente
 **Pré-requisitos** :  
