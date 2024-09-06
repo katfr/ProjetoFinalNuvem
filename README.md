@@ -50,7 +50,7 @@ CREATE DATABASE clientes;
 SHOW DATABASES;
 ```
 
-**Deploy na EC2 e rodandando a aplicação como um serviço:**
+**Deploy na EC2 e rodando a aplicação como um serviço:**
 
 > Foi utilizado Ubuntu
 
